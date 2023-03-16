@@ -9,7 +9,6 @@
 </template>
 
 <script lang="ts">
-	import { storeToRefs } from 'pinia';
 	import { useCounterStore } from '@/stores/counter';
 
 	export default {

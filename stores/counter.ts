@@ -1,5 +1,5 @@
 
-import { defineStore } from 'pinia'
+import { defineStore } from 'pinia';
 
 export const useCounterStore = defineStore('counter', {
     state: () => ({
@@ -8,6 +8,6 @@ export const useCounterStore = defineStore('counter', {
     actions: {
         update(value: number) {
             this.count = value
-        }
+        },
     },
 })
