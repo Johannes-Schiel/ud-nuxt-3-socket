@@ -12,17 +12,11 @@ export default defineNitroPlugin((nitroApp) => {
         }
     });
 
-    io.on('connection', (socket) => {
-        console.log('Connection', socket.id)
-    })
-
     io.on('connect', (socket) => {
-
         socket.on('up', (message: { value: number }) => {
             count = count + message.value;
             io.emit('new count', count);
         })
-
         socket.on('down', (message: { value: number }) => {
             count = count - message.value;
             io.emit('new count', count);
