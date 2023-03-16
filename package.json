@@ -1,0 +1,18 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "devDependencies": {
+    "nuxt": "^3.3.1"
+  },
+  "dependencies": {
+    "@pinia/nuxt": "^0.4.7",
+    "socket.io": "^4.6.1",
+    "socket.io-client": "^4.6.1"
+  }
+}
