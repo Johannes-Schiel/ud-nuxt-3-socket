@@ -1,33 +1,9 @@
-<template>
-	<p>id: {{ $io.id }}</p>
-	<p>count: {{ store.count }}</p>
+<template></template>
 
-	<div class="buttons">
-		<Button @click="up()">Up</Button>
-		<Button @click="down()">down</Button>
-	</div>
-</template>
-
-<script lang="ts">
-	import { useCounterStore } from '@/stores/counter';
-
-	export default {
-		methods: {
-			up() {
-				this.$io.emit('up', { value: 5 });
-			},
-			down() {
-				this.$io.emit('down', { value: 5 });
-			},
-		},
-		setup() {
-			return { store: useCounterStore() };
-		},
-	};
-</script>
+<script lang="ts"></script>
 
 <style lang="scss">
-	$prime: #ff6e48;
+	$prime: #17eb9c;
 	$ciBlue: #00fff1;
 	$ciRed: #ff00aa;
 	$ciWhite: #ffffff;
@@ -81,5 +57,14 @@
 		justify-content: center;
 		align-items: center;
 		gap: 1rem;
+	}
+
+	button {
+		color: $ciSecond;
+		border: none;
+		border-radius: 0.5rem;
+		padding: 0.5rem 1rem;
+		background-color: #17eb9c;
+		cursor: pointer;
 	}
 </style>
