@@ -1,12 +1,10 @@
 <template>
-	<div>
-		<p>id: {{ $io.id }}</p>
-		<p>count: {{ store.count }}</p>
+	<p>id: {{ $io.id }}</p>
+	<p>count: {{ store.count }}</p>
 
-		<div class="buttons">
-			<Button @click="up()">Up</Button>
-			<Button @click="down()">down</Button>
-		</div>
+	<div class="buttons">
+		<Button @click="up()">Up</Button>
+		<Button @click="down()">down</Button>
 	</div>
 </template>
 
@@ -14,7 +12,6 @@
 	import { useCounterStore } from '@/stores/counter';
 
 	export default {
-		data: () => ({}),
 		methods: {
 			up() {
 				this.$io.emit('up', { value: 5 });
