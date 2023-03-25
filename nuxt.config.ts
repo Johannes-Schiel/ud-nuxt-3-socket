@@ -6,6 +6,9 @@ export default defineNuxtConfig({
             socketPort: 3001
         }
     },
+    plugins: [
+        './plugins/socket.io'
+    ],
     nitro: {
         preset: 'node-server',
         plugins: [
